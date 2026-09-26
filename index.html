@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Paws - Pet Care</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff8f0;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ff914d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 28px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffe0c2;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background-color: #ffe0c2;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h2 {
+            font-size: 48px;
+            color: #d95f02;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #d94e1f;
+        }
+
+        .hero-image {
+            width: 40%;
+            text-align: center;
+            font-size: 150px;
+        }
+
+        /* About Section */
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #d95f02;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .section > p {
+            margin-bottom: 35px;
+            font-size: 17px;
+        }
+
+        /* Pet Cards */
+        .pet-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .pet-card {
+            background-color: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .pet-card .pet-icon {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        .pet-card h3 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+        .pet-card p {
+            line-height: 1.5;
+        }
+
+        /* Services */
+        .services {
+            background-color: #fff0df;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            background-color: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .service span {
+            font-size: 45px;
+        }
+
+        .service h3 {
+            margin: 15px 0 10px;
+            color: #d95f02;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: #ff914d;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-text h2 {
+                font-size: 38px;
+            }
+
+            .hero-image {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h1>🐾 Happy Paws</h1>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pets">Pets</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h2>Love. Care. Happiness.</h2>
+            <p>
+                Welcome to Happy Paws! We provide loving care,
+                fun activities, and everything your furry friends
+                need to live a happy and healthy life.
+            </p>
+
+            <a href="#pets" class="btn">Meet Our Pets</a>
+        </div>
+
+        <div class="hero-image">
+            🐶
+        </div>
+    </section>
+
+    <!-- Pets Section -->
+    <section class="section" id="pets">
+        <h2>Meet Our Lovely Pets</h2>
+        <p>Our pets are friendly, playful, and ready to make new friends!</p>
+
+        <div class="pet-container">
+
+            <div class="pet-card">
+                <div class="pet-icon">🐶</div>
+                <h3>Buddy</h3>
+                <p>
+                    Buddy is a playful and friendly dog who loves
+                    running and playing fetch.
+                </p>
+            </div>
+
+            <div class="pet-card">
+                <div class="pet-icon">🐱</div>
+                <h3>Luna</h3>
+                <p>
+                    Luna is a sweet cat who enjoys cuddles,
+                    naps, and chasing toys.
+                </p>
+            </div>
+
+            <div class="pet-card">
+                <div class="pet-icon">🐰</div>
+                <h3>Coco</h3>
+                <p>
+                    Coco is a cute and energetic rabbit who loves
+                    fresh vegetables and hopping around.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+        <h2>Our Pet Services</h2>
+        <p>Everything your pet needs under one roof.</p>
+
+        <div class="service-container">
+
+            <div class="service">
+                <span>🛁</span>
+                <h3>Pet Grooming</h3>
+                <p>
+                    Professional grooming to keep your pets
+                    clean, healthy, and happy.
+                </p>
+            </div>
+
+            <div class="service">
+                <span>🏠</span>
+                <h3>Pet Boarding</h3>
+                <p>
+                    A safe and comfortable place for your pets
+                    while you're away.
+                </p>
+            </div>
+
+            <div class="service">
+                <span>❤️</span>
+                <h3>Pet Care</h3>
+                <p>
+                    Loving daily care and attention for your
+                    furry family members.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 123 Pet Street, Bengaluru</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ hello@happypaws.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Happy Paws. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
